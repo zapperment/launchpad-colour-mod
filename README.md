@@ -94,9 +94,13 @@ Restart Ableton Live and enjoy the new colours!
 
 ### Changing the colours
 
-Open the file [output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation/colors.py](output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation/colors.py).
+Open the file _output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation/colors.py_.
 
-Lines 62-270 define the mapping from the RGB values of the 70 clip colours in Live (the high numbers) to the 128 colours that the Launchpad can display (the low numbers after the colon).
+Lines 61-271 define `CLIP_COLOR_TABLE`.
+
+![Source code: CLIP_COLOR_TABLE](docs/images/clip-color-table.png)
+
+This is the mapping from the RGB values of the 70 clip colours in Live (the high numbers) to the 128 colours that the Launchpad can display (the low numbers after the colon).
 
 Here is an approximation of what the Launchpad colours look like:
 
