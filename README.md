@@ -82,7 +82,7 @@ The whole thing will **definitely not** work with other Python versions!
 
 There is a script called `mod-colours.sh`.
 
-This compiles the Python source file `colors.py` that is located in the subdirectory `output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation` and copies over the original `colors.pyc` module that is location in the Ableton Live app folder, under `MIDI Remote Scripts/novation`.
+This compiles the Python source file `colors.py` that is located in the subdirectory `output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation` and copies it over the original `colors.pyc` module that is location in the Ableton Live app folder, under `MIDI Remote Scripts/novation`.
 
 Run it like so:
 
