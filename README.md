@@ -24,17 +24,13 @@ But that’s only eight colours out of 70! The others are mostly useless, becaus
 
 This project changes all that.
 
-Here's a live set in Ableton Live that has 70 clip slots, one for each colour of the Live palette:
-
-![Ableton Live colours](docs/images/clip-colours.png)
-
-Here is a comparison of the Launchpad colours with the default colour mapping from Novation that comes with Ableton Live (left) and the custom colour mapping version 1 provided by this project (right):
+Here is a comparison of the Launchpad colours with the default colours from Novation that comes with Ableton Live and the modified colours:
 
 ![Before and after comparison](docs/images/before-and-after-comparison.png)
 
 ## Sorry, no Windows — for now
 
-Currently, the script to update the colours only works on Macs. But it shouldn't be hard to figure out how to make it work on Windows. Make sure you use the correct Python version (3.11.1), find out where the _MIDI Remote Scripts_ directory is when Live is installed on Windows, and update the script `update-colours.sh` accordingly. If you have a Windows machine and have figured this out, I'll be happy to accept a pull request from you!
+Currently, the script to modify the colours only works on Macs. But it shouldn't be hard to figure out how to make it work on Windows. Make sure you use the correct Python version (3.11.1), find out where the _MIDI Remote Scripts_ directory is when Live is installed on Windows, and update the script `mod-colours.sh` accordingly. If you have a Windows machine and have figured this out, I'll be happy to accept a pull request from you!
 
 ## Prerequisites
 
@@ -52,14 +48,14 @@ It should show version 3.11.1.
 
 ## Running the script
 
-There is a script called `update-colours.sh`.
+There is a script called `mod-colours.sh`.
 
 This compiles the Python source file `colors.py` that is located in the subdirectory `output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation` and copies over the original `colors.pyc` module that is location in the Ableton Live app folder, under `MIDI Remote Scripts/novation`.
 
 Run it like so:
 
 ```
-./update-colours.sh
+./mod-colours.sh
 ```
 
 Restart Ableton Live and enjoy the new colours!
