@@ -52,7 +52,7 @@ Restart Ableton Live — your Launchpad should now have the improved pad colours
 
 I can give absolutely no guarantee that this will work on your machine! I've tested it on a Mac with Ableton Live version 12.1.1.
 
-It is possible that your Launchpad or other Novation controller stops working with Live entirely.
+It is possible that your Launchpad or other Novation controller stops working with Live entirely with the modified version of _colors.pcy_.
 
 If this is the case, you'll have to re-install Live to get it to work again. Use at your own risk.
 
