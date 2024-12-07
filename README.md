@@ -24,23 +24,49 @@ But that’s only eight colours out of 70! The others are mostly useless, becaus
 
 This project changes all that.
 
-Here's a live set in Ableton Live that has 70 clip slots, one for each colour of the Live palette:
-
-![Ableton Live colours](docs/images/clip-colours.png)
-
-Here is a comparison of the Launchpad colours with the default colour mapping from Novation that comes with Ableton Live (left) and the custom colour mapping version 1 provided by this project (right):
+Here is a comparison of the Launchpad colours with the default colours from Novation that comes with Ableton Live and the modified colours:
 
 ![Before and after comparison](docs/images/before-and-after-comparison.png)
 
-## Sorry, no Windows — for now
+## How to install
 
-Currently, the script to update the colours only works on Macs. But it shouldn't be hard to figure out how to make it work on Windows. Make sure you use the correct Python version (3.11.1), find out where the _MIDI Remote Scripts_ directory is when Live is installed on Windows, and update the script `update-colours.sh` accordingly. If you have a Windows machine and have figured this out, I'll be happy to accept a pull request from you!
+Go to the [releases page](https://github.com/zapperment/launchpad-colour-mod/releases) and download the file _colors.pyc_ attached to the latest release.
 
-## Prerequisites
+Find this directory on your computer's file system, which is a subdirectory of where you've installed Ableton Live:
 
-You should have [pyenv](https://github.com/pyenv/pyenv) installed on your Mac. And Ableton Live, obviously. I've run the script successfully with Live version 12.1.1.
+```
+MIDI Remote Scripts/novation
+```
 
-## Setup
+On a Mac, this will most likely be:
+
+```
+/Applications/Ableton Live Suite.app/Contents/App-Resources/MIDI Remote Scripts/novation/
+```
+
+Copy the file _colors.pyc_ to this directory, overwriting the original file.
+
+Restart Ableton Live — your Launchpad should now have the improved pad colours!
+
+## ”It didn't work!”
+
+I can give absolutely no guarantee that this will work on your machine! I've tested it on a Mac with Ableton Live version 12.1.1.
+
+It is possible that your Launchpad or other Novation controller stops working with Live entirely with the modified version of _colors.pcy_.
+
+If this is the case, you'll have to re-install Live to get it to work again. Use at your own risk.
+
+## Development
+
+You want to make your own adjustments to the colours? Read this.
+
+### Prerequisites
+
+You should have Python and [pyenv](https://github.com/pyenv/pyenv) installed on your Mac. And Ableton Live, obviously. I've run the script to modify the colours successfully with Live version 12.1.1.
+
+Have a windows machine? You'll have to adjust the script _update-colours.sh_ accordingly.
+
+### Setup
 
 Set the correct Python version:
 
@@ -50,16 +76,36 @@ pyenv local
 
 It should show version 3.11.1.
 
-## Running the script
+The whole thing will **definitely not** work with other Python versions!
 
-There is a script called `update-colours.sh`.
+### Running the script
 
-This compiles the Python source file `colors.py` that is located in the subdirectory `output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation` and copies over the original `colors.pyc` module that is location in the Ableton Live app folder, under `MIDI Remote Scripts/novation`.
+There is a script called `mod-colours.sh`.
+
+This compiles the Python source file `colors.py` that is located in the subdirectory `output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation` and copies it over the original `colors.pyc` module that is location in the Ableton Live app folder, under `MIDI Remote Scripts/novation`.
 
 Run it like so:
 
 ```
-./update-colours.sh
+./mod-colours.sh
 ```
 
 Restart Ableton Live and enjoy the new colours!
+
+### Changing the colours
+
+Open the file _output/Live/mac_universal_64_static/Release/python-bundle/MIDI Remote Scripts/novation/colors.py_.
+
+Lines 61-271 define `CLIP_COLOR_TABLE`.
+
+![Source code: CLIP_COLOR_TABLE](docs/images/clip-color-table.png)
+
+This is the mapping from the RGB values of the 70 clip colours in Live (the high numbers) to the 128 colours that the Launchpad can display (the low numbers after the colon).
+
+Here is an approximation of what the Launchpad colours look like:
+
+![Launchpad colours](docs/images/launchpad-colours.png)
+
+Assign the numbers 0-127 to the RGB values to change the colours on your Launchpad to your liking.
+
+To test your changes, run the _mod-colours.sh_ script again and restart Ableton Live.
