@@ -1,6 +1,3 @@
-# Source Generated with Decompyle++
-# File: colors.pyc (Python 3.11)
-
 from ableton.v2.control_surface.elements import AnimatedColor, Color
 
 BLINK_CHANNEL = 1
@@ -62,75 +59,214 @@ class Mono(object):
     ON = Color(127)
 
 CLIP_COLOR_TABLE = {
+    # salmon
     16304336: 56,
+
+    # frank orange
     15579756: 61,
+
+    # dirty gold
     12890726: 100,
+
+    # lemonade
     15856827: 73,
+
+    # lime
     12380990: 85,
+
+    # highlighter green
     5632102: 87,
+
+    # bianchi
     6418872: 88,
+
+    # turquoise
     9959144: 28,
+
+    # sky blue
     12442873: 91,
+
+    # sapphire
     9811172: 92,
+
+    # periwinkle
     12766969: 40,
+
+    # orchid
     14793450: 82,
+
+    # magenta
     14853318: 58,
+
+    # white
     16777215: 3,
+
+    # fire hydrant red
     15694713: 106,
+
+    # tangerine
     14780736: 127,
+
+    # sand
     10855297: 117,
+
+    # sunshine yellow
     15723127: 14,
+
+    # terminal green
     11728803: 86,
+
+    # forest
     5357093: 19,
+
+    # tiffany blue
     2014124: 65,
+
+    # cyan
     5628654: 68,
+
+    # cerulean
     4764640: 39,
+
+    # united nations blue
     1935034: 43,
+
+    # amtethyst
     12565226: 93,
+
+    # iris
     14076642: 70,
+
+    # flamingo
     15695577: 53,
+
+    # aluminum
     16054262: 2,
+
+    # terracotta
     14790567: 105,
+
+    # light salmon
     16173488: 107,
+
+    # whiskey
     14604478: 8,
+
+    # canary
     15924181: 73,
+
+    # primrose
     15200983: 113,
+
+    # wild willow
     13952703: 16,
+
+    # dark sea green
     13756371: 24,
+
+    # honeydew
     15465713: 114,
+
+    # pale turquoise
     15530491: 114,
+
+    # periwinkle
     15331061: 118,
+
+    # fog
     15855863: 2,
+
+    # dull lavender
     14605298: 39,
+
+    # whisper
     16579836: 119,
+
+    # silver chalice
     14214111: 118,
+
+    # dusty pink
     14735828: 2,
+
+    # barley corn
     12695710: 105,
+
+    # pale oyster
     11911343: 118,
+
+    # dark khaki
     13687734: 110,
+
+    # pistachio
     10664482: 18,
+
+    # dollar bill
     10669463: 102,
+
+    # neptune
     12837852: 89,
+
+    # nepal
     13952230: 89,
+
+    # polo blue
     12638174: 36,
+
+    # vista blue
     12701922: 40,
+
+    # amethyst smoke
     14080993: 2,
+
+    # lilac
     15263724: 118,
+
+    # turkish rose
     13878477: 70,
+
+    # steel
     10073772: 117,
+
+    # medium carmine
     11628393: 121,
+
+    # red ochre
     11304802: 83,
+
+    # coffee
     8289123: 71,
+
+    # durian yellow
     13418542: 15,
+
+    # pomelo green
     9152321: 19,
+
+    # apple
     7451749: 27,
+
+    # aquamarine
     1811861: 65,
+
+    # sea blue
     3177621: 68,
+
+    # cosmic cobalt
     2837410: 104,
+
+    # sapphire
     5077422: 112,
+
+    # plump purple
     9541570: 71,
+
+    # purpureus
     11967942: 70,
+
+    # fuchsia rose
     13007771: 55,
+
+    # eclipse
     4151376: 103
 }
 
